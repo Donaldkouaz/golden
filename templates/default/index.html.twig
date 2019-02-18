@@ -1,20 +1,424 @@
-{% extends 'base.html.twig' %}
+{% extends 'base.html.twig' %} {% block title %} {{ parent() }}{% endblock %} {% block stylesheets %} {{ parent() }} {% endblock
+stylesheets %} {% block body %} {#
+<!-- Header -->
+<header class="w3-display-container w3-content w3-wide" style="max-width:1500px;" id="home">
+  <img class="w3-image" src="{{ asset('images/architect.jpg')}}" alt="Architecture" width="1500" height="800">
+  <div class="w3-display-middle w3-margin-top w3-center">
+    <h1 class="w3-xxlarge w3-text-white"><span class="w3-padding w3-black w3-opacity-min"><b>GOLDEN</b></span> <span class="w3-hide-small w3-text-light-grey">City</span></h1>
+  </div>
+</header>
 
-{% block title %}Hello {{ controller_name }}!{% endblock %}
+<!-- Page content -->
+<div class="w3-content w3-padding" style="max-width:1564px">
 
-{% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
+  <!-- Project Section -->
+  <div class="w3-container w3-padding-32" id="projects">
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Projets</h3>,
+  </div>
 
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
+  <div class="w3-row-padding">
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding">Cubique</div>
+        <img src="{{ asset('images/house5.jpg')}}" alt="House" style="width:100%">
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding">Terre cuite</div>
+        <img src="{{asset('images/house2.jpg')}}" alt="House" style="width:100%">
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding">Renovée</div>
+        <img src="{{asset('images/house3.jpg')}}" alt="House" style="width:100%">
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding">Grange</div>
+        <img src="{{asset('images/house4.jpg')}}" alt="House" style="width:100%">
+      </div>
+    </div>
+  </div>
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ 'src/Controller/DefaultController.php'|file_link(0) }}">src/Controller/DefaultController.php</a></code></li>
-        <li>Your template at <code><a href="{{ 'templates/default/index.html.twig'|file_link(0) }}">templates/default/index.html.twig</a></code></li>
-    </ul>
-</div>
+  <div class="w3-row-padding">
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding">Summer House</div>
+        <img src="{{asset('images/house2.jpg')}}" alt="House" style="width:99%">
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding">Brick House</div>
+        <img src="{{asset('images/house5.jpg')}}" alt="House" style="width:99%">
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding">Renovated</div>
+        <img src="{{asset('images/house4.jpg')}}" alt="House" style="width:99%">
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding">Barn House</div>
+        <img src="{{asset('images/house3.jpg')}}" alt="House" style="width:99%">
+      </div>
+    </div>
+  </div>
+
+  <!-- About Section -->
+  <div class="w3-container w3-padding-32" id="about">
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">A propos de nous</h3>
+    <p>Nous sommes un groupe de jeunes dynamiques et avons décidé d’unir nos compétences pour fournir aux clients des services
+      de qualité à moindre cout. Notre mission est de trouver des solutions pour offrir des services de qualité accessible
+      à tous. Pour cela, nous proposons un ensemble de services qui combinent les activités du domaine immobilier et du BTP
+      notamment : la réalisation des plans architecturaux, plans d’exécution, métré, gestion de chantier, exécution de projet
+      de construction, vente, location, gestion et promotion de biens immobilier.
+    </p>
+  </div>
+
+  <div class="w3-row-padding w3-grayscale">
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <img src="{{asset('images/rhoss2.jpg')}}" alt="John" style="width:100%">
+      <h3>Rhoss HOUNKPATIN</h3>
+      <p class="w3-opacity">Ingénieur</p>
+      <p>Spécialiste des techniques du batiment et des travaux public.</p>
+      <p><button class="w3-button w3-light-grey w3-block">Contact</button></p>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <img src="{{asset('images/jecolia.jpg')}}" alt="Jane" style="width:100%">
+      <h3>Jécolia SAGBOHAN</h3>
+      <p class="w3-opacity">Architecte</p>
+      <p>Experte en architecture et aménagement intérieur.</p>
+      <p><button class="w3-button w3-light-grey w3-block">Contact</button></p>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <img src="{{asset('images/andre.jpg')}}" alt="Mike" style="width:100%">
+      <h3>André ANAGONOU</h3>
+      <p class="w3-opacity">Architecte</p>
+      <p>Expert en architecture et design extérieur.</p>
+      <p><button class="w3-button w3-light-grey w3-block">Contact</button></p>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <img src="{{asset('images/DONALD.jpg')}}" alt="Dan" style="width:100%">
+      <h3>Donald KOUAZOUN</h3>
+      <p class="w3-opacity">Ingénieur</p>
+      <p>Spécialiste des techniques du batiment et des travaux public.</p>
+      <p><button class="w3-button w3-light-grey w3-block">Contact</button></p>
+    </div>
+  </div>
+
+  <!-- Contact Section -->
+  <div class="w3-container w3-padding-32" id="contact">
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Contactez nous</h3>
+    <p>Laissez nous un message.</p>
+    <form action="/action_page.php" target="_blank">
+      <input class="w3-input w3-border" type="text" placeholder="Nom" required name="Name">
+      <input class="w3-input w3-section w3-border" type="text" placeholder="Adress E-mail" required name="Email">
+      <input class="w3-input w3-section w3-border" type="text" placeholder="Sujet" required name="Subject">
+      <input class="w3-input w3-section w3-border" type="text" placeholder="Commentaires" required name="Comment">
+      <button class="w3-button w3-black w3-section" type="submit">
+        <i class="fa fa-paper-plane"></i> ENVOYER LE MESSAGE
+      </button>
+    </form>
+  </div>
+
+  <!-- End page content -->
+</div> #}
+
+<!-- Intro Seven -->
+<section class="intro carousel slide bg-overlay-light h-auto" id="carouselExampleCaptions" data-interval="5000">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleCaptions" data-slide-to="1" class=""></li>
+  </ol>
+  <div class="carousel-inner" role="listbox">
+    <div class="carousel-item active">
+      <img class="d-block img-fluid" alt="First slide" src="{{ asset('images/1.jpg')}}">
+      <div class="carousel-caption ">
+        <h2 class="display-4 text-white mb-2 mt-4">Construire sa maison n'a jamais été aussi simple</h2>
+        <p class="text-white mb-3 px-5 lead">We make it happen</p>
+        <a href="#" class="btn btn-primary btn-capsul px-4 py-2">Explorez plus</a>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img class="d-block img-fluid" alt="First slide" src="{{ asset('images/2.jpg')}}">
+      <div class="carousel-caption ">
+        <h2 class="display-4 text-white mb-2 mt-4">Un design de pointe et un confort à votre hauteur</h2>
+        <p class="text-white mb-3 px-5 lead">Me make it happen</p>
+        <a href="#" class="btn btn-primary btn-capsul px-4 py-2">Explorez plus</a>
+      </div>
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+  <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+</section>
+
+<!-- Info block 1 -->
+<section class="info-section">
+  <div class="container">
+    <div class="head-box text-center mb-5">
+      <h2>Nos services</h2>
+    </div>
+    <div class="three-panel-block mt-5">
+      <div class="row">
+        <div class="col-lg-4 col-md-6 col-sm-6">
+          <div class="service-block-overlay text-center mb-5 p-lg-3">
+            <i class="fa fa-laptop box-circle-solid mt-3 mb-3" aria-hidden="true"></i>
+            <h3>Réalisation de plans architecturaux</h3>
+            <p class="px-4 text-justify">Nous réalisons en fonction des exigences du client, les plans architecturaux pour sa future construction. Tout en tenant compte de l’enveloppe financière du client, nous lui réalisons des plans modernes, suivant les normes architecturales en vigueur.  </p>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-6">
+          <div class="service-block-overlay text-center mb-5 p-lg-3">
+            <i class="fa fa-calendar box-circle-solid mt-3 mb-3" aria-hidden="true"></i>
+            <h3>Réalisation de plans de structure – Métré </h3>
+            <p class="px-4 text-justify">A partir des plans architecturaux, nous réalisons la conception structurale des bâtiments. Les structures peuvent être en béton armé, en bois ou en construction métallique. Nous faisons ressortir à l’issu des calculs, les quantités de matériau nécessaire pour la réalisation de l’ouvrage.</p>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-6">
+          <div class="service-block-overlay text-center mb-5 p-lg-3">
+            <i class="fa fa-bug box-circle-solid mt-3 mb-3" aria-hidden="true"></i>
+            <h3>Exécution – Gestion de chantier</h3>
+            <p class="px-4 text-justify">Nous nous chargeons d’exécuter les travaux de construction de bâtiment en assurant l’ensemble des corps d’état depuis le gros œuvre jusqu’aux aménagements et finitions extérieures. </p>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-6">
+          <div class="service-block-overlay text-center p-lg-3">
+            <i class="fa fa-cloud-upload box-circle-solid mt-3 mb-3" aria-hidden="true"></i>
+            <h3>Vente et location de biens immobiliers</h3>
+            <p class="px-4 text-justify">Nous aidons les clients désirant vendre ou mettre en location leurs biens immobiliers à trouver des preneurs. Nous aidons ainsi les personnes résidant au Bénin ou à l’extérieur à retrouver et acheter ou louer facilement un bien immobilier en toute sécurité. </p>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-6">
+          <div class="service-block-overlay text-center p-lg-3">
+            <i class="fa fa-diamond box-circle-solid mt-3 mb-3" aria-hidden="true"></i>
+            <h3>Recouvrement de loyer</h3>
+            <p class="px-4 text-justify">Nous aidons les propriétaires de biens immobiliers dans la gestion locative de leurs biens immobilier. Nous assurons le recouvrement du loyer et tous les services nécessaires à la bonne gestion du patrimoine immobilier du client.</p>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-6">
+          <div class="service-block-overlay text-center p-lg-3">
+            <i class="fa fa-comments box-circle-solid mt-3 mb-3" aria-hidden="true"></i>
+            <h3>Promotion immobilière</h3>
+            <p class="px-4 text-justify">Nous proposons une prise en charge complète (clé sur porte) de votre futur patrimoine immobilier. Nous assurons la construction du bâtiment, depuis les études techniques jusqu’à la concrétisation du projet en proposant une solution qui répond à la demande du client en termes d’esthétique, de fonctionnalité et de budget.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Info block 1 -->
+<section class="info-section bg-primary py-0">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-6 col-lg-6 content-half mt-md-0 pl-5 pt-4">
+        <div class="head-box mb-5 pl-5 mt-2">
+          <h2 class="text-white">Nos Valeurs</h2>
+        </div>
+        <ul class="pl-5">
+          <li>
+            <i class="fa fa-laptop box-round-outline" aria-hidden="true"></i>
+            <span class="list-content">
+                        <strong>Designs dynamiques</strong>
+                      </span>
+          </li>
+          <li>
+            <i class="fa fa-cloud-upload box-round-outline" aria-hidden="true"></i>
+            <span class="list-content">
+                        <strong>Economie - Qualité</strong>
+          </li>
+          <li>
+            <i class="fa fa-diamond box-round-outline" aria-hidden="true"></i>
+            <span class="list-content">
+                        <strong>Efficacité - Confort</strong>
+                      </span>
+          </li>
+        </ul>
+      </div>
+      <div class="col-md-6 p-0 m-0">
+        <img src="{{ asset('images/2.jpg')}}" class="img-fluid">
+      </div>
+    </div>
+</section>
+
+<!-- team style 1 -->
+<section class="team-section py-5">
+  <div class="container">
+    <div class="row mb-5">
+      <div class="head-box text-center mb-5 col-md-12">
+        <h2>L'équipe</h2>
+      </div>
+      <div class="col-md-4 mb-md-0 mb-sm-4">
+        <div class="member-box anim-lf t-bottom">
+          <img class="img-fluid" src="{{asset('images/rhoss2.jpg')}}" alt="">
+          <div class="overlay-content">
+            <h3 class="text-white ml-3 my-0">Rhoss HOUNKPATIN</h3>
+            <p class="text-white ml-3 mb-3">Ingénieur</p>
+            <span class="socail-l ml-3 mb-3">
+                  <a href="#" class="mr-2"><i class="fa fa-facebook box-circle-solid"></i></a>
+            <a href="#" class="mr-2"><i class="fa fa-twitter box-circle-solid"></i></a>
+            <a href="#"><i class="fa fa-dribbble box-circle-solid"></i></a>
+                </span>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-md-0 mb-sm-4">
+        <div class="member-box anim-lf t-bottom">
+          <img class="img-fluid" src="{{asset('images/jecolia2.jpg')}}" alt="">
+          <div class="overlay-content">
+            <h3 class="text-white ml-3 my-0">Jécolia SAGBOHAN</h3>
+            <p class="text-white ml-3 mb-3">Architecte</p>
+            <span class="socail-l ml-3 mb-3">
+                  <a href="#" class="mr-2"><i class="fa fa-facebook box-circle-solid"></i></a>
+            <a href="#" class="mr-2"><i class="fa fa-twitter box-circle-solid"></i></a>
+            <a href="#"><i class="fa fa-dribbble box-circle-solid"></i></a>
+                </span>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-md-0 mb-sm-4">
+        <div class="member-box anim-lf t-bottom">
+          <img class="img-fluid" src="{{asset('images/andre2.jpg')}}" alt="">
+          <div class="overlay-content">
+            <h3 class="text-white ml-3 my-0">André ANAGONOU</h3>
+            <p class="text-white ml-3 mb-3">Ingénieur</p>
+            <span class="socail-l ml-3 mb-3">
+                  <a href="#" class="mr-2"><i class="fa fa-facebook box-circle-solid"></i></a>
+            <a href="#" class="mr-2"><i class="fa fa-twitter box-circle-solid"></i></a>
+            <a href="#"><i class="fa fa-dribbble box-circle-solid"></i></a>
+                </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{# <!-- Widget 1 -->
+<section class="widget py-3 bg-primary">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-8 col-sm-12 text-sm-center text-md-left text-white pt-3">
+        <h2>Subscribe Newsletter</h2>
+        <p>The will to win, the desire to succeed, the urge to reach your full potential... these are the keys that will unlock
+          the door to personal excellence.</p>
+      </div>
+      <div class="col-md-4 col-lg-3 col-sm-12 text-sm-center text-md-right copy-container">
+        <div class="copy-content">
+          <a href="#" class="btn btn-dark btn-capsul px-5 py-3">Subscribe Now</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonial Block 04-->
+<section class="testimonial-section py-5">
+  <div class="container">
+    <div class="row">
+      <div class="head-box text-center mb-3 col-md-12">
+        <h2>Client Testimonials</h2>
+        <h6 class="text-underline-primary mb-5 pb-1">What people says about us.</h6>
+      </div>
+      <div class="col-md-4 mb-sm-4 mb-md-0 pb-5">
+        <div class="card block-style-03">
+          <div class="card-body">
+            <p class="text-center"><img class="img-fluid rounded-circle" src="img/t-member-06.jpg" alt="Generic placeholder image"></p>
+            <p class="text-center mb-1"><i class="fa fa-quote-left fa-2x text-primary" aria-hidden="true"></i></p>
+            <p class="card-text text-center">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+              magna aliqua. Ut enim ad minim veniam.</p>
+          </div>
+          <div class="card-footer bg-primary">
+            <div class="media text-center text-white">
+              <div class="media-body">
+                <h5 class="mt-2 mb-0">Allison A</h5>
+                <p>-United States</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-sm-4 mb-md-0 pb-5">
+        <div class="card block-style-03">
+          <div class="card-body">
+            <p class="text-center"><img class="img-fluid rounded-circle" src="img/t-member-05.jpg" alt="Generic placeholder image"></p>
+            <p class="text-center mb-1"><i class="fa fa-quote-left fa-2x text-primary" aria-hidden="true"></i></p>
+            <p class="card-text text-center">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+              magna aliqua. Ut enim ad minim veniam.</p>
+          </div>
+          <div class="card-footer bg-primary">
+            <div class="media text-center text-white">
+              <div class="media-body">
+                <h5 class="mt-2 mb-0">Julian Powell</h5>
+                <p>-United States</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 pb-5">
+        <div class="card block-style-03">
+          <div class="card-body">
+            <p class="text-center"><img class="img-fluid rounded-circle" src="img/t-member-04.jpg" alt="Generic placeholder image"></p>
+            <p class="text-center mb-1"><i class="fa fa-quote-left fa-2x text-primary" aria-hidden="true"></i></p>
+            <p class="card-text text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+              magna aliqua. Ut enim ad minim veniam.</p>
+          </div>
+          <div class="card-footer bg-primary">
+            <div class="media text-center text-white">
+              <div class="media-body">
+                <h5 class="mt-2 mb-0">Kylie Barnes</h5>
+                <p>-United States</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Info block 6 -->
+<section class="info-section bg-light py-4">
+  <div class="container">
+    <div class="three-panel-block text-dark">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="service-block text-left px-lg-5 px-md-0">
+            <i class="fa fa-laptop box-circle-outline mb-3" aria-hidden="true"></i>
+            <h3>Responsive Design</h3>
+            <p>Never in all their history have men been able truly to conceive of the world as one a single sphere</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="service-block text-left px-lg-5 px-md-0">
+            <i class="fa fa-cloud-upload box-circle-outline mb-3" aria-hidden="true"></i>
+            <h3>Cloud Storage</h3>
+            <p>Never in all their history have men been able truly to conceive of the world as one a single sphere</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="service-block text-left px-lg-5 px-md-0">
+            <i class="fa fa-diamond box-circle-outline mb-3" aria-hidden="true"></i>
+            <h3>Premium Features</h3>
+            <p>Never in all their history have men been able truly to conceive of the world as one a single sphere</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> #}
 {% endblock %}

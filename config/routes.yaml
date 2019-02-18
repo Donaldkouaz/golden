@@ -1,6 +1,21 @@
-#index:
-#    path: /
-#    controller: App\Controller\DefaultController::index
-#index:
-#    path: /
-#    controller: App\Controller\Controller::index
+
+
+app_accueil:
+    path: /
+    controller: App\Controller\DefaultController::index
+
+app_projets:
+    path: /projets/{page}
+    controller: App\Controller\DefaultController::projets
+    defaults:
+        page: 1
+    requirements:
+        page: '\d+'
+
+app_planscat:
+    path: /projets/{categorie}/{page}
+    controller: App\Controller\DefaultController::projetscat
+    defaults:
+        page: 1
+    requirements:
+        page: '\d+'
